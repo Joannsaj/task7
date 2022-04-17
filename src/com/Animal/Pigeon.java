@@ -1,6 +1,6 @@
 package com.Animal;
 
-public class Pigeon extends Bird{
+public class Pigeon extends Bird implements AnimalBehaviour, AnimalMove{
     String speciesNansamba57153;
 
     public Pigeon() {
@@ -33,5 +33,15 @@ public class Pigeon extends Bird{
         return "Pigeon{" +
                 "species='" + speciesNansamba57153 + '\'' +
                 '}';
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+    @Override
+    public void move() {
+        System.out.println(this.getClass().getSimpleName() + " flies");
     }
 }

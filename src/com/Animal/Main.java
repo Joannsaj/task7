@@ -29,7 +29,18 @@ public class Main {
         animal[5].eat("corn");
         animal[5].getVoice();
 
+        AnimalBehaviour animalBehaviour [] = new AnimalBehaviour[3];
+        animalBehaviour[0]=new Dog("DoGGy","Dog","bulldog");
+        animalBehaviour[1]=new Pigeon("BiRDy","grey","flying-bird");
+        animalBehaviour[2]=new BlowFish("FiSHy","jawless","goldfish");
 
+        for (Animal a : animal){
+            a.move();
+        }
+
+        for (Animal a: animal){
+            AnimalName.name(a.getNameNansamba57153());
+        }
     }
 
 }

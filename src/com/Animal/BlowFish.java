@@ -1,6 +1,6 @@
 package com.Animal;
 
-public class BlowFish extends Fish{
+public class BlowFish extends Fish implements AnimalBehaviour,AnimalMove{
     private String speciesNansamba57153;
 
     public BlowFish(String species) {
@@ -32,5 +32,15 @@ public class BlowFish extends Fish{
         return "BlowFish{" +
                 "species='" + speciesNansamba57153 + '\'' +
                 '}';
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+    @Override
+    public void move() {
+        System.out.println(this.getClass().getSimpleName() + " swims");
     }
 }

@@ -1,6 +1,6 @@
 package com.Animal;
 
-public abstract class Animal {
+public abstract class Animal implements AnimalMove, AnimalName{
     String nameNansamba57153;
     int ageNansamba57153;
     int weightNansamba57153;
@@ -54,4 +54,10 @@ public abstract class Animal {
                 ", weight=" + weightNansamba57153 +
                 '}';
     }
+
+    @Override
+    public void move() {
+        AnimalMove.super.move();
+    }
+
 }

@@ -1,6 +1,6 @@
 package com.Animal;
 
-public class Dog extends Mammal {
+public class Dog extends Mammal implements AnimalBehaviour, AnimalMove {
     private String breedNansamba57153;
 
     public Dog(String breed) {
@@ -33,5 +33,14 @@ public class Dog extends Mammal {
         return "Dog{" +
                 "breed='" + breedNansamba57153 + '\'' +
                 '}';
+    }
+
+    @Override
+    public void sleep() {
+    }
+
+    @Override
+    public void move() {
+        System.out.println(this.getClass().getSimpleName() + " runs");
     }
 }
